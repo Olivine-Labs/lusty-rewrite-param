@@ -19,6 +19,7 @@ dependencies = {
 build = {
   type = "builtin",
   modules = {
+    ["lusty-rewrite-param.rewrite.accept"]      = "src/rewrite/accept.lua",
     ["lusty-rewrite-param.rewrite.method"]      = "src/rewrite/method.lua",
     ["lusty-rewrite-param.rewrite.body"]        = "src/rewrite/body.lua",
     ["lusty-rewrite-param.rewrite.content-type"]= "src/rewrite/content-type.lua"
