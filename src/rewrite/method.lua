@@ -1,6 +1,6 @@
 return {
   handler = function(context)
-    context.request.method = context.request.query.method
+    context.request.method = context.request.query.method:upper()
     return nil, true
   end,
 
