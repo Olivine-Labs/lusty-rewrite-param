@@ -1,3 +1,6 @@
+
+local param = config.param
+
 local function url_decode(str)
   str = string.gsub (str, "+", " ")
   str = string.gsub (str, "%%(%x%x)",
@@ -8,14 +11,14 @@ end
 
 return {
   handler = function(context)
-    context.request.body = url_decode(context.request.query.body)
+    context.request.body = url_decode(context.request.query[param])
     context.request.body_was_read = true
     return nil, true
   end,
 
   options = {
     predicate = function(context)
-      if context.request.query.body then
+      if context.request.query[param] then
         return true
       end
       return false

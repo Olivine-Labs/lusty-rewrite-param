@@ -1,12 +1,15 @@
+
+local param = config.param
+
 return {
   handler = function(context)
-    context.request.headers["accept"] = context.request.query["accept"]
+    context.request.headers["accept"] = context.request.query[param]
     return nil, true
   end,
 
   options = {
     predicate = function(context)
-      if context.request.query["accept"] then
+      if context.request.query[param] then
         return true
       end
       return false
