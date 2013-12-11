@@ -1,8 +1,8 @@
 package = "lusty-rewrite-param"
-version = "0.2-0"
+version = "0.3-0"
 source = {
-  url = "https://github.com/Olivine-Labs/lusty-rewrite-param/archive/v0.2.tar.gz",
-  dir = "lusty-rewrite-param-0.2"
+  url = "https://github.com/Olivine-Labs/lusty-rewrite-param/archive/v0.3.tar.gz",
+  dir = "lusty-rewrite-param-0.3"
 }
 description = {
   summary = "HTTP param rewrites for lusty.",
