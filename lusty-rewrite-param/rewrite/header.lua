@@ -1,9 +1,9 @@
-
 local param = config.param
+local header = config.header
 
 return {
   handler = function(context)
-    context.request.method = context.request.query[param]:upper()
+    context.request.headers[header] = context.request.query[param]
     return nil, true
   end,
 
